@@ -5,7 +5,7 @@ const MatchStats = () => {
   const [matchData, setMatchData] = useState(null);
 
   useEffect(() => {
-    axios.get('http://localhost:5000/api/match-data')
+    axios.get('http://localhost:5001/api/match-data')
       .then(response => setMatchData(response.data))
       .catch(error => console.error("Error fetching data", error));
   }, []);
